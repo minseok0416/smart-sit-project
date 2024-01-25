@@ -1,0 +1,285 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$-m-text-color : #f6f6f6;
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0 auto;
+    background-image: radial-gradient(
+        circle at 20% 100%,
+        rgba(184, 184, 184, 0.1) 0%,
+        rgba(184, 184, 184, 0.1) 33%,
+        rgba(96, 96, 96, 0.1) 33%,
+        rgba(96, 96, 96, 0.1) 66%,
+        rgba(7, 7, 7, 0.1) 66%,
+        rgba(7, 7, 7, 0.1) 99%
+      ),
+      linear-gradient(40deg, #040a22, #2f323c, #7c7e87, #a9aab0);
+    // background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    transition: background-color .5s;
+}
+
+a{
+    text-decoration: none ;
+    color: $-m-text-color;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    // padding: 10px 55px;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    background: rgb(28, 27, 27);
+    
+    nav{
+        // width: 100%;
+        // position: fixed;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        // text-decoration: none;
+        padding: 20px 34px;
+
+        h1{
+            font-size: 50px;
+            font-weight: 600;
+        }
+    }
+}
+
+.page1{
+    position: relative;
+    height: 89vh;
+    top: 21vh;
+
+    .explain{
+        margin: auto;
+        width: 760px;
+        height: 60vh;
+        border: none;
+        border-radius: 20px;
+        background-color: #f6f6f6;
+        padding: 20px;
+    }
+
+    #section1{
+        display: flex;
+        margin: auto;
+        text-align: center;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 25px;
+        position: absolute;
+        top: 64vh;
+        left: 45%;
+    }
+
+    .arrow{
+        position: absolute;
+        top: 68%;
+        bottom: 205%;
+        transform: translateX(-50%);
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        animation: bounce 1.5s infinite;
+    }
+}
+
+.page2{
+    position: absolute;
+    height: 100vh;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    .top{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        font-size: 25px;
+    }
+}
+
+
+.container{
+    width: 1400px;
+    height: 58vh;
+    margin: 230px auto 0;
+
+    img{
+        border-radius: 8px;
+        border: 5px solid #f6f6f6;
+    }
+
+}
+
+.sensormonitor{
+    background-color: #f6f6f6;
+    width: 600px;
+    height: 42vh;
+    justify-content: space-around;
+    display: grid;
+    align-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+th{
+    text-align: center;
+}
+
+.Btn{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 200px;
+    font-size: 20px;
+    
+    .submitbtn{
+        width: 95px;
+        height: 3rem;
+        border: none;
+        border-radius: 30px;
+    }
+}
+
+.submitbtn:hover{
+    color: #f9f9f9;
+    background-color: #5555;
+}
+
+.submitbtn:active{
+    color: #f9f9f9;
+    background-color: bisque;
+}
+
+
+
+@media all and (max-width:850px) and (max-width: 1024px) {
+    html{
+        min-width: 850px;
+        // width: 100%;
+        height: 100%;
+    }
+
+    body{
+        width: 100%;  
+    }
+
+    .page1{
+        width: 100%;
+
+        .explain{
+            width: 50%;
+            margin: auto;
+            margin-left: 15%;
+            margin-right: 40%;
+        }
+
+        #section1{
+            top: 627px;
+            left: 32%;
+        }
+    }
+
+    .page2{
+        width: 100%;
+        height: 100%;
+
+        .container{
+            width: 80%;
+            // margin: auto;
+            margin-top: 200px;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img{
+            max-width: 450px;
+            width: 100%;
+        }
+
+        .sensormonitor{
+            width: 80%;
+        }
+
+        .Btn{
+            position: relative;
+            margin-top: 136px;
+            margin-left: 10%;
+        }
+
+        #section2{
+            margin: 0;
+            margin-left: -14%;
+        }
+
+    }
+}
+
+@media all and (device-height: 715px) and (max-width: 850px){
+    html{
+        width: 100%;
+        height: 100%;
+    }
+
+    #section1{
+        left: 32%;
+        top: -20%;
+    }
+    
+}
+
+// @media (max-width: 768px) {
+//     /* 작은 화면에 대한 스타일 조정 */
+
+//     html{
+//         min-width: 760px;
+//     }
+
+//     .explain{
+//         width: 300px;
+//     }
+//     .container {
+//         width: 100%;
+//     }
+//     .webcammonitor, .sensormonitor {
+//         float: none;
+//         width: 100%;
+//     }
+//     .firstline td, .secondline td, .thirdline td {
+//         width: auto;
+//     }
+// }
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(5px);
+    }
+    60% {
+      transform: translateY(3px);
+    }
+  }
