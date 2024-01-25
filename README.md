@@ -25,6 +25,9 @@ OpenCV를 활용하여 웹캠을 통한 앉은자세의 위치 측정
 
 
 ## 주요기능
+
+#### FaceDetection - <a href="https://github.com/minseok0416/smart-sit-project/blob/master/service.py">상세보기 - WIKI 이동
+
 #### 아두이노 스케치 - <a href="https://github.com/minseok0416/smart-room-project/blob/master/project/project.ino">상세보기 - WIKI 이동
 
 #### node.js - <a href="https://github.com/minseok0416/smart-room-project/blob/master/app.js">상세보기 - WIKI 이동
